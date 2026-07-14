@@ -15,33 +15,33 @@ export function Footer() {
   ];
 
   return (
-    <footer className="mt-auto border-t border-neutral-200 bg-neutral-50">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-3">
+    <footer className="mt-auto border-t border-white/10 bg-coal/60">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-3">
         <section>
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
-            Tentang Wiguna
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-700">
-            {siteConfig.tagline}. Fashion multifungsi yang dirancang untuk
-            gaya hidup urban — satu item, banyak cara pakai.
+          <p className="font-display text-2xl font-semibold tracking-[0.25em] text-cream">
+            WIGUNA
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-stone-400">
+            {siteConfig.tagline}. Fashion multifungsi yang dirancang untuk gaya
+            hidup urban — satu item, banyak cara pakai.
           </p>
           <Link
             href="/profil"
-            className="mt-3 inline-block text-sm font-medium text-brand hover:underline"
+            className="mt-4 inline-block text-sm font-medium text-gold transition hover:text-champagne"
           >
             Baca profil perusahaan →
           </Link>
         </section>
 
         <section>
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Hubungi Kami
           </h2>
-          <ul className="mt-3 space-y-2 text-sm">
+          <ul className="mt-4 space-y-2.5 text-sm">
             <li>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="text-neutral-700 hover:text-brand"
+                className="text-stone-300 transition hover:text-champagne"
               >
                 {siteConfig.contact.email}
               </a>
@@ -50,7 +50,7 @@ export function Footer() {
               <a
                 href={siteConfig.contact.whatsapp}
                 {...externalLinkProps}
-                className="text-neutral-700 hover:text-brand"
+                className="text-stone-300 transition hover:text-champagne"
               >
                 WhatsApp
               </a>
@@ -59,17 +59,17 @@ export function Footer() {
         </section>
 
         <section>
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Ikuti &amp; Belanja
           </h2>
-          <ul className="mt-3 flex flex-wrap gap-2">
+          <ul className="mt-4 flex flex-wrap gap-2">
             {socialLinks.map((link) => (
               <li key={link.label}>
                 {/* min 44x44px touch target (FR-1.3) */}
                 <a
                   href={link.href}
                   {...externalLinkProps}
-                  className="flex min-h-11 items-center rounded-lg border border-neutral-300 bg-white px-4 text-sm font-medium text-neutral-700 transition hover:border-brand hover:text-brand"
+                  className="glass flex min-h-11 items-center rounded-full px-5 text-sm font-medium text-stone-200 transition hover:border-gold/50 hover:text-champagne"
                 >
                   {link.label}
                 </a>
@@ -78,7 +78,7 @@ export function Footer() {
           </ul>
         </section>
       </div>
-      <div className="border-t border-neutral-200 py-4 text-center text-xs text-neutral-500">
+      <div className="border-t border-white/10 py-5 text-center text-xs tracking-wide text-stone-500">
         © {new Date().getFullYear()} Wiguna. Seluruh transaksi dilakukan di
         toko resmi kami di Shopee &amp; TikTok Shop.
       </div>

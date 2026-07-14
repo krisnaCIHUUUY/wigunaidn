@@ -23,7 +23,7 @@ export function BuyButtons({ product }: { product: Product }) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackMarketplaceRedirect(product.slug, channel.key)}
-          className="flex min-h-12 flex-1 items-center justify-center rounded-full bg-brand px-6 text-center font-semibold text-white transition hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          className="btn-gold flex min-h-12 flex-1 items-center justify-center rounded-full px-6 text-center text-sm font-semibold uppercase tracking-[0.1em] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
         >
           {channel.label}
         </a>

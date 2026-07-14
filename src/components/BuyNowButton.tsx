@@ -41,7 +41,7 @@ export function BuyNowButton() {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        className="btn-gold cursor-pointer rounded-full px-5 py-2.5 text-[13px] font-semibold uppercase tracking-[0.12em] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
       >
         Beli Sekarang
       </button>
@@ -49,7 +49,7 @@ export function BuyNowButton() {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2 w-48 overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-lg"
+          className="glass-strong absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-2xl shadow-2xl shadow-black/50"
         >
           {channels.map((channel) => (
             <a
@@ -62,7 +62,7 @@ export function BuyNowButton() {
                 trackBuyNowClick(channel.key);
                 setOpen(false);
               }}
-              className="block px-4 py-3 text-sm font-medium text-neutral-800 transition hover:bg-neutral-100"
+              className="block px-5 py-3.5 text-sm font-medium text-cream transition hover:bg-white/10 hover:text-champagne"
             >
               Belanja di {channel.label}
             </a>

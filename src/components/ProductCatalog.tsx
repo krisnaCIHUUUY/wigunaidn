@@ -51,10 +51,10 @@ export function ProductCatalog({ products }: { products: Product[] }) {
             type="button"
             onClick={() => setActive(f.key)}
             aria-pressed={active === f.key}
-            className={`min-h-11 rounded-full border px-4 text-sm font-medium transition ${
+            className={`min-h-11 cursor-pointer rounded-full px-5 text-[13px] font-medium uppercase tracking-[0.1em] transition ${
               active === f.key
-                ? "border-brand bg-brand text-white"
-                : "border-neutral-300 bg-white text-neutral-700 hover:border-brand hover:text-brand"
+                ? "btn-gold"
+                : "glass text-stone-300 hover:border-gold/40 hover:text-champagne"
             }`}
           >
             {f.label}
@@ -62,14 +62,14 @@ export function ProductCatalog({ products }: { products: Product[] }) {
         ))}
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {visible.map((product) => (
           <ProductCard key={product.slug} product={product} />
         ))}
       </div>
 
       {visible.length === 0 && (
-        <p className="mt-10 text-center text-neutral-500">
+        <p className="mt-10 text-center text-stone-400">
           Belum ada produk pada kategori ini.
         </p>
       )}

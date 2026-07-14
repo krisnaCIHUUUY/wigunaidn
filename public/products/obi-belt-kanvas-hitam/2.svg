@@ -1,6 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-  <rect width="800" height="800" fill="#292524"/>
-  <rect x="80" y="80" width="640" height="640" rx="24" fill="#ffffff" fill-opacity="0.15"/>
-  <text x="400" y="380" text-anchor="middle" font-family="sans-serif" font-size="34" fill="#ffffff" font-weight="bold">Obi Belt Kanvas Hitam</text>
-  <text x="400" y="430" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#ffffff" fill-opacity="0.8">Mode transformasi (placeholder)</text>
+  <defs>
+    <radialGradient id="glow" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#332a19"/>
+      <stop offset="100%" stop-color="#0f0d0b"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecd7a0"/>
+      <stop offset="100%" stop-color="#a5813f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#glow)"/>
+  <rect x="70" y="70" width="660" height="660" rx="24" fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.6"/>
+  <text x="400" y="385" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="url(#gold)">Obi Belt Kanvas Hitam</text>
+  <text x="400" y="440" text-anchor="middle" font-family="sans-serif" font-size="14" letter-spacing="4" fill="#78716c">MODE TRANSFORMASI — PLACEHOLDER</text>
 </svg>

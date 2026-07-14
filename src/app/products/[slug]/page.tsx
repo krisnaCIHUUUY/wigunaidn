@@ -59,75 +59,84 @@ export default async function ProductDetailPage({ params }: Props) {
   };
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-14">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <nav aria-label="Breadcrumb" className="text-sm text-neutral-500">
-        <Link href="/products" className="hover:text-brand">
+      <nav aria-label="Breadcrumb" className="text-sm text-stone-500">
+        <Link href="/products" className="transition hover:text-champagne">
           Produk
         </Link>{" "}
-        / <span className="text-neutral-800">{product.name}</span>
+        / <span className="text-stone-300">{product.name}</span>
       </nav>
 
-      <div className="mt-6 grid gap-10 md:grid-cols-2">
+      <div className="mt-8 grid gap-10 md:grid-cols-2">
         {/* Galeri foto termasuk kondisi transformasi (FR-3.2) */}
-        <div className="space-y-4">
+        <div className="space-y-5">
           {product.images.map((img, i) => (
-            <div
-              key={img.src}
-              className="relative aspect-square overflow-hidden rounded-2xl bg-neutral-100"
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                priority={i === 0}
-                loading={i === 0 ? "eager" : "lazy"}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
+            <div key={img.src} className="glass rounded-[2rem] p-2.5">
+              <div className="relative aspect-square overflow-hidden rounded-[1.6rem] bg-coal">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  priority={i === 0}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           ))}
         </div>
 
         <div>
-          <p className="text-sm font-medium uppercase tracking-wide text-neutral-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
             {categoryLabels[product.category]}
           </p>
-          <h1 className="mt-2 text-3xl font-bold text-neutral-900">
+          <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-cream md:text-5xl">
             {product.name}
           </h1>
           {product.transformation && (
-            <p className="mt-2 inline-block rounded-full bg-neutral-100 px-3 py-1 text-sm font-medium text-neutral-700">
+            <p className="glass mt-4 inline-block rounded-full px-4 py-1.5 text-sm font-medium text-champagne">
               {product.transformation}
             </p>
           )}
-          <p className="mt-4 text-2xl font-bold text-neutral-900">
+          <p className="mt-6 text-3xl font-semibold tracking-wide text-champagne">
             {formatIDR(product.price)}
           </p>
-          <p className="mt-1 text-xs text-neutral-500">
+          <p className="mt-1 text-xs tracking-wide text-stone-500">
             Harga referensi — harga final &amp; promo mengikuti marketplace.
           </p>
 
-          <div className="mt-8">
+          <div className="mt-9">
             <BuyButtons product={product} />
           </div>
 
-          <section className="mt-10">
-            <h2 className="font-semibold text-neutral-900">Deskripsi</h2>
-            <p className="mt-2 leading-relaxed text-neutral-700">
+          <section className="mt-12 border-t border-white/10 pt-8">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              Deskripsi
+            </h2>
+            <p className="mt-3 font-light leading-relaxed text-stone-300">
               {product.description}
             </p>
           </section>
 
-          <section className="mt-6">
-            <h2 className="font-semibold text-neutral-900">Material</h2>
-            <ul className="mt-2 list-inside list-disc space-y-1 text-neutral-700">
+          <section className="mt-8">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+              Material
+            </h2>
+            <ul className="mt-3 space-y-2 font-light text-stone-300">
               {product.materials.map((material) => (
-                <li key={material}>{material}</li>
+                <li key={material} className="flex items-center gap-3">
+                  <span
+                    className="h-1 w-1 shrink-0 rounded-full bg-gold"
+                    aria-hidden="true"
+                  />
+                  {material}
+                </li>
               ))}
             </ul>
           </section>

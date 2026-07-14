@@ -10,15 +10,20 @@ export const metadata: Metadata = {
 
 export default function ProfilPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="text-3xl font-bold text-neutral-900">
+    <div className="mx-auto max-w-3xl px-4 py-14">
+      <p className="text-xs font-semibold uppercase tracking-[0.35em] text-gold">
+        The House of Wiguna
+      </p>
+      <h1 className="mt-3 font-display text-4xl font-semibold text-cream md:text-5xl">
         Profil Perusahaan
       </h1>
 
       {/* Brand story (FR-5.1) */}
-      <section className="mt-8">
-        <h2 className="text-xl font-bold text-neutral-900">Kisah Kami</h2>
-        <div className="mt-3 space-y-4 leading-relaxed text-neutral-700">
+      <section className="mt-10">
+        <h2 className="font-display text-3xl font-semibold text-cream">
+          Kisah Kami
+        </h2>
+        <div className="mt-4 space-y-4 font-light leading-relaxed text-stone-300">
           <p>
             Wiguna lahir dari sebuah pengamatan sederhana: lemari kita penuh,
             tapi rasanya selalu ada yang kurang. Kami percaya jawabannya bukan
@@ -36,46 +41,47 @@ export default function ProfilPage() {
         </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-xl font-bold text-neutral-900">Visi</h2>
-        <p className="mt-3 leading-relaxed text-neutral-700">
+      <section className="glass mt-12 rounded-3xl p-8">
+        <h2 className="font-display text-3xl font-semibold text-cream">Visi</h2>
+        <p className="mt-3 font-light leading-relaxed text-stone-300">
           Menjadi brand fashion multifungsi terdepan di Indonesia yang
           membuktikan bahwa gaya, kepraktisan, dan konsumsi yang bijak bisa
           hadir dalam satu produk.
         </p>
       </section>
 
-      <section className="mt-10">
-        <h2 className="text-xl font-bold text-neutral-900">Misi</h2>
-        <ul className="mt-3 list-inside list-disc space-y-2 leading-relaxed text-neutral-700">
-          <li>
-            Merancang produk fashion yang selalu memiliki lebih dari satu
-            fungsi nyata.
-          </li>
-          <li>
-            Menggunakan material berkualitas dan proses produksi lokal yang
-            bertanggung jawab.
-          </li>
-          <li>
-            Membangun kepercayaan melalui kanal penjualan resmi yang mudah
-            diverifikasi.
-          </li>
+      <section className="glass mt-6 rounded-3xl p-8">
+        <h2 className="font-display text-3xl font-semibold text-cream">Misi</h2>
+        <ul className="mt-4 space-y-3 font-light leading-relaxed text-stone-300">
+          {[
+            "Merancang produk fashion yang selalu memiliki lebih dari satu fungsi nyata.",
+            "Menggunakan material berkualitas dan proses produksi lokal yang bertanggung jawab.",
+            "Membangun kepercayaan melalui kanal penjualan resmi yang mudah diverifikasi.",
+          ].map((misi) => (
+            <li key={misi} className="flex items-start gap-3">
+              <span
+                className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-gold"
+                aria-hidden="true"
+              />
+              {misi}
+            </li>
+          ))}
         </ul>
       </section>
 
       {/* Kontak & kolaborasi (FR-5.2) */}
-      <section className="mt-12 rounded-2xl bg-neutral-50 p-6">
-        <h2 className="text-lg font-bold text-neutral-900">
+      <section className="glass-iridescent mt-12 rounded-3xl p-8 text-center">
+        <h2 className="font-display text-3xl font-semibold text-cream">
           Kolaborasi &amp; Media
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-neutral-700">
+        <p className="mx-auto mt-3 max-w-md text-sm font-light leading-relaxed text-stone-300">
           Tertarik bekerja sama, membeli dalam jumlah besar, atau meliput
           Wiguna? Hubungi kami:
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <a
             href={`mailto:${siteConfig.contact.email}`}
-            className="inline-flex min-h-11 items-center rounded-full bg-brand px-6 text-sm font-semibold text-white transition hover:bg-brand-dark"
+            className="btn-gold inline-flex min-h-11 items-center rounded-full px-7 text-sm font-semibold uppercase tracking-[0.1em]"
           >
             Email Kami
           </a>
@@ -83,15 +89,18 @@ export default function ProfilPage() {
             href={siteConfig.contact.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center rounded-full border-2 border-neutral-900 px-6 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
+            className="glass inline-flex min-h-11 items-center rounded-full px-7 text-sm font-medium uppercase tracking-[0.1em] text-cream transition hover:border-gold/50 hover:text-champagne"
           >
             WhatsApp
           </a>
         </div>
       </section>
 
-      <div className="mt-10">
-        <Link href="/products" className="font-medium text-brand hover:underline">
+      <div className="mt-12">
+        <Link
+          href="/products"
+          className="text-sm font-medium uppercase tracking-[0.15em] text-gold transition hover:text-champagne"
+        >
           ← Kembali ke koleksi produk
         </Link>
       </div>

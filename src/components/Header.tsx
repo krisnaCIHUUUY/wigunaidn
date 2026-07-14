@@ -17,11 +17,11 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/90 backdrop-blur">
+    <header className="glass sticky top-0 z-40 border-x-0 border-t-0 bg-ink/70">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight text-neutral-900"
+          className="font-display text-2xl font-semibold tracking-[0.25em] text-cream"
           aria-label="Wiguna — kembali ke Home"
         >
           WIGUNA
@@ -29,16 +29,16 @@ export function Header() {
 
         {/* Navigasi desktop */}
         <nav aria-label="Navigasi utama" className="hidden md:block">
-          <ul className="flex items-center gap-6">
+          <ul className="flex items-center gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   aria-current={isActive(link.href) ? "page" : undefined}
-                  className={`text-sm font-medium transition hover:text-brand ${
+                  className={`text-[13px] font-medium uppercase tracking-[0.15em] transition hover:text-champagne ${
                     isActive(link.href) && link.label !== "Best Seller"
-                      ? "text-brand"
-                      : "text-neutral-700"
+                      ? "text-gold"
+                      : "text-stone-300"
                   }`}
                 >
                   {link.label}
@@ -57,7 +57,7 @@ export function Header() {
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             aria-label={menuOpen ? "Tutup menu" : "Buka menu"}
-            className="flex h-11 w-11 items-center justify-center rounded-lg text-neutral-800 transition hover:bg-neutral-100 md:hidden"
+            className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-lg text-cream transition hover:bg-white/10 md:hidden"
           >
             <svg
               width="24"
@@ -65,7 +65,7 @@ export function Header() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1.5"
               strokeLinecap="round"
               aria-hidden="true"
             >
@@ -91,7 +91,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Navigasi utama (mobile)"
-          className="border-t border-neutral-200 bg-white md:hidden"
+          className="border-t border-white/10 bg-ink/95 md:hidden"
         >
           <ul className="px-4 py-2">
             {navLinks.map((link) => (
@@ -100,10 +100,10 @@ export function Header() {
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
                   aria-current={isActive(link.href) ? "page" : undefined}
-                  className={`block py-3 text-base font-medium ${
+                  className={`block py-3.5 text-sm font-medium uppercase tracking-[0.15em] ${
                     isActive(link.href) && link.label !== "Best Seller"
-                      ? "text-brand"
-                      : "text-neutral-800"
+                      ? "text-gold"
+                      : "text-stone-200"
                   }`}
                 >
                   {link.label}
