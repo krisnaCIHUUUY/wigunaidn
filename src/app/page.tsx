@@ -1,65 +1,108 @@
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+import { getBestSellers } from "@/lib/products";
+import { ProductCard } from "@/components/ProductCard";
 
-export default function Home() {
+export const metadata: Metadata = {
+  description: siteConfig.description,
+};
+
+export default function HomePage() {
+  const bestSellers = getBestSellers();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* Hero (FR-2.1) */}
+      <section className="bg-neutral-900 text-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 md:grid-cols-2 md:py-24">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-brand">
+              Wiguna
+            </p>
+            <h1 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">
+              Satu Item,
+              <br />
+              Banyak Fungsi.
+            </h1>
+            <p className="mt-4 max-w-md text-lg text-neutral-300">
+              Rompi yang berubah jadi tote bag. Bucket hat dua gaya. Obi belt
+              tiga siluet. Fashion multifungsi untuk hidup yang terus bergerak.
+            </p>
+            <Link
+              href="/products"
+              className="mt-8 inline-block rounded-full bg-brand px-8 py-3.5 font-semibold text-white transition hover:bg-brand-dark"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Jelajahi Koleksi
+            </Link>
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-neutral-800">
+            {/* TODO: ganti dengan foto model resmi (WebP/AVIF) */}
+            <Image
+              src="/hero.svg"
+              alt="Model mengenakan Rompi Transforma Wiguna dalam mode rompi dan mode tote bag"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Best Sellers / Highlights (FR-2.2) */}
+      <section className="mx-auto max-w-6xl px-4 py-16">
+        <div>
+          <h2 className="text-2xl font-bold text-neutral-900 md:text-3xl">
+            Best Sellers
+          </h2>
+          <p className="mt-2 text-neutral-600">
+            Produk paling dicari di toko resmi kami.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {bestSellers.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
         </div>
-      </main>
-    </div>
+        {/* View More (FR-2.3) */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/products"
+            className="inline-block rounded-full border-2 border-neutral-900 px-8 py-3 font-semibold text-neutral-900 transition hover:bg-neutral-900 hover:text-white"
+          >
+            Lihat Semua Produk
+          </Link>
+        </div>
+      </section>
+
+      {/* Value proposition singkat */}
+      <section className="border-t border-neutral-200 bg-neutral-50">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:grid-cols-3">
+          {[
+            {
+              title: "Multifungsi",
+              body: "Setiap produk dirancang dengan lebih dari satu cara pakai — nilai maksimal dari satu item.",
+            },
+            {
+              title: "Toko Resmi",
+              body: "Belanja aman hanya melalui toko resmi Wiguna di Shopee dan TikTok Shop.",
+            },
+            {
+              title: "Desain Lokal",
+              body: "Dirancang dan diproduksi di Indonesia dengan material pilihan.",
+            },
+          ].map((item) => (
+            <div key={item.title}>
+              <h3 className="font-semibold text-neutral-900">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                {item.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

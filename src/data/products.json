@@ -1,0 +1,95 @@
+[
+  {
+    "slug": "rompi-transforma-hitam",
+    "name": "Rompi Transforma — Hitam",
+    "category": "vest",
+    "price": 289000,
+    "materials": ["Kanvas katun 12oz", "Ritsleting YKK", "Tali webbing nilon"],
+    "description": "Rompi utilitas yang berubah menjadi tote bag dalam hitungan detik. Lepas ritsleting samping, lipat panelnya, dan rompi Anda siap membawa belanjaan. Potongan unisex dengan saku multifungsi di dada dan pinggang.",
+    "transformation": "Rompi ↔ Tote Bag",
+    "images": [
+      { "src": "/products/rompi-transforma-hitam/1.svg", "alt": "Rompi Transforma hitam tampak depan, dikenakan model" },
+      { "src": "/products/rompi-transforma-hitam/2.svg", "alt": "Rompi Transforma hitam dalam mode tote bag" }
+    ],
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/rompi-transforma-hitam",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/rompi-transforma-hitam",
+    "isBestSeller": true
+  },
+  {
+    "slug": "rompi-transforma-khaki",
+    "name": "Rompi Transforma — Khaki",
+    "category": "vest",
+    "price": 289000,
+    "materials": ["Kanvas katun 12oz", "Ritsleting YKK", "Tali webbing nilon"],
+    "description": "Varian khaki dari rompi ikonik Wiguna. Fungsi sama — rompi harian yang bertransformasi menjadi tote bag — dengan warna netral hangat yang mudah dipadukan.",
+    "transformation": "Rompi ↔ Tote Bag",
+    "images": [
+      { "src": "/products/rompi-transforma-khaki/1.svg", "alt": "Rompi Transforma khaki tampak depan, dikenakan model" },
+      { "src": "/products/rompi-transforma-khaki/2.svg", "alt": "Rompi Transforma khaki dalam mode tote bag" }
+    ],
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/rompi-transforma-khaki",
+    "isBestSeller": false
+  },
+  {
+    "slug": "bucket-hat-balik-dua-sisi",
+    "name": "Bucket Hat Balik — Dua Sisi",
+    "category": "hat",
+    "price": 149000,
+    "materials": ["Twill katun", "Lapisan quick-dry polyester"],
+    "description": "Satu bucket hat, dua gaya. Sisi luar twill polos untuk tampilan clean, sisi dalam bermotif untuk statement look. Tinggal balik sesuai mood.",
+    "transformation": "Polos ↔ Motif (reversible)",
+    "images": [
+      { "src": "/products/bucket-hat-balik-dua-sisi/1.svg", "alt": "Bucket Hat Balik sisi polos dikenakan model" },
+      { "src": "/products/bucket-hat-balik-dua-sisi/2.svg", "alt": "Bucket Hat Balik sisi motif" }
+    ],
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/bucket-hat-balik",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/bucket-hat-balik",
+    "isBestSeller": true
+  },
+  {
+    "slug": "bucket-hat-lipat-saku",
+    "name": "Bucket Hat Lipat Saku",
+    "category": "hat",
+    "price": 129000,
+    "materials": ["Nilon ripstop", "Tali serut adjustable"],
+    "description": "Bucket hat ultra-ringan yang bisa dilipat menjadi pouch kecil seukuran saku. Teman perjalanan yang selalu siap saat matahari terik.",
+    "transformation": "Topi ↔ Pouch saku",
+    "images": [
+      { "src": "/products/bucket-hat-lipat-saku/1.svg", "alt": "Bucket Hat Lipat Saku dikenakan model" },
+      { "src": "/products/bucket-hat-lipat-saku/2.svg", "alt": "Bucket Hat Lipat Saku terlipat dalam mode pouch" }
+    ],
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/bucket-hat-lipat-saku",
+    "isBestSeller": false
+  },
+  {
+    "slug": "obi-belt-tenun-natural",
+    "name": "Obi Belt Tenun — Natural",
+    "category": "obi-belt",
+    "price": 199000,
+    "materials": ["Tenun katun handmade", "Kulit sintetis premium"],
+    "description": "Obi belt dengan panel tenun tradisional yang bisa dikenakan tiga cara: sebagai belt statement di luar blazer, ikat pinggang dress, atau aksen kimono-style. Satu aksesori, banyak siluet.",
+    "transformation": "3 gaya pemakaian",
+    "images": [
+      { "src": "/products/obi-belt-tenun-natural/1.svg", "alt": "Obi Belt Tenun natural dikenakan di atas dress" },
+      { "src": "/products/obi-belt-tenun-natural/2.svg", "alt": "Detail panel tenun Obi Belt natural" }
+    ],
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/obi-belt-tenun-natural",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/obi-belt-tenun-natural",
+    "isBestSeller": true
+  },
+  {
+    "slug": "obi-belt-kanvas-hitam",
+    "name": "Obi Belt Kanvas — Hitam",
+    "category": "obi-belt",
+    "price": 179000,
+    "materials": ["Kanvas katun", "Buckle logam anti-karat"],
+    "description": "Versi minimalis dari obi belt Wiguna. Kanvas hitam pekat dengan buckle tersembunyi — cocok untuk gaya monokrom maupun sebagai kontras di outfit cerah.",
+    "transformation": "3 gaya pemakaian",
+    "images": [
+      { "src": "/products/obi-belt-kanvas-hitam/1.svg", "alt": "Obi Belt Kanvas hitam dikenakan model" },
+      { "src": "/products/obi-belt-kanvas-hitam/2.svg", "alt": "Obi Belt Kanvas hitam tampak detail" }
+    ],
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/obi-belt-kanvas-hitam",
+    "isBestSeller": true
+  }
+]

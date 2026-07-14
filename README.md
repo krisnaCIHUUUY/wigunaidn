@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wiguna Official Website
 
-## Getting Started
+Landing page & katalog produk resmi Wiguna — brand fashion multifungsi (rompi transformable, bucket hat convertible, obi belt). Situs statis tanpa backend; seluruh transaksi diarahkan ke toko resmi di **Shopee** dan **TikTok Shop**.
 
-First, run the development server:
+Spesifikasi lengkap: [`wiguna-website-prd.md`](./wiguna-website-prd.md)
+
+## Tech Stack
+
+- **Next.js 16** (App Router, `output: "export"` — full static)
+- **Tailwind CSS 4**
+- **TypeScript**
+- Data produk: satu file [`src/data/products.json`](./src/data/products.json) (siap dimigrasikan ke headless CMS di v2)
+
+## Menjalankan
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # development di http://localhost:3000
+npm run build    # static export ke folder out/
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Struktur
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── page.tsx                  # Home (hero + best sellers)
+│   ├── products/page.tsx         # Katalog + filter kategori
+│   ├── products/[slug]/page.tsx  # Detail produk + JSON-LD + tombol beli
+│   ├── cara-belanja/page.tsx     # Panduan belanja Shopee/TikTok Shop
+│   ├── profil/page.tsx           # Profil perusahaan
+│   ├── sitemap.ts / robots.ts    # SEO
+│   └── layout.tsx                # Header + Footer global
+├── components/                   # Header, Footer, ProductCard, BuyButtons, dll.
+├── config/site.ts                # URL marketplace, sosial media, kontak
+├── data/products.json            # ⭐ satu-satunya sumber data produk
+└── lib/                          # tipe produk, format harga, analytics events
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Menambah / Mengubah Produk
 
-## Learn More
+1. Tambahkan entri baru di `src/data/products.json` (ikuti tipe `Product` di `src/lib/products.ts`).
+2. Letakkan foto produk di `public/products/<slug>/` (format WebP/AVIF, sertakan foto mode transformasi).
+3. `npm run build` — halaman detail, sitemap, dan kartu produk ter-generate otomatis. Tidak ada kode layout yang perlu diubah.
 
-To learn more about Next.js, take a look at the following resources:
+## Sebelum Launch (TODO)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Ganti `siteConfig.url` dan semua URL placeholder di `src/config/site.ts` dengan URL resmi (marketplace deep-link, sosial media, WhatsApp, email).
+- [ ] Ganti gambar placeholder SVG (`public/hero.svg`, `public/products/**`) dengan foto produk asli (WebP/AVIF).
+- [ ] Pasang script analytics (Plausible/GA4) di `src/app/layout.tsx` — event tracking sudah disiapkan di `src/lib/analytics.ts` (`buy_now_click`, `marketplace_redirect`).
+- [ ] Deploy ke Vercel / Netlify / Cloudflare Pages (folder output: `out/`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Situs ini 100% statis. Hubungkan repo ke Vercel/Netlify/Cloudflare Pages — build command `npm run build`, output directory `out/`. Setiap push otomatis ter-deploy.
