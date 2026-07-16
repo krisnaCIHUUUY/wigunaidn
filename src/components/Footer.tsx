@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
-
-const externalLinkProps = {
-  target: "_blank",
-  rel: "noopener noreferrer",
-} as const;
+import { externalLinkProps } from "@/lib/links";
 
 export function Footer() {
   const socialLinks = [
@@ -69,7 +65,7 @@ export function Footer() {
                 <a
                   href={link.href}
                   {...externalLinkProps}
-                  className="glass flex min-h-11 items-center rounded-full px-5 text-sm font-medium text-stone-200 transition hover:border-gold/50 hover:text-champagne"
+                  className="btn-glass flex min-h-11 items-center px-5 text-sm font-medium"
                 >
                   {link.label}
                 </a>

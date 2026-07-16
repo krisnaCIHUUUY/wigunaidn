@@ -1,19 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { externalLinkProps } from "@/lib/links";
 import { getBestSellers } from "@/lib/products";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
-
-export const metadata: Metadata = {
-  description: siteConfig.description,
-};
-
-const externalLinkProps = {
-  target: "_blank",
-  rel: "noopener noreferrer",
-} as const;
 
 /* Ikon SVG stroke-konsisten (tanpa emoji) */
 function IconLayers() {
@@ -120,7 +111,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/cara-belanja"
-                className="glass rounded-full px-8 py-4 text-sm font-medium uppercase tracking-[0.12em] text-cream transition hover:border-gold/50 hover:text-champagne"
+                className="btn-glass px-8 py-4 text-sm font-medium uppercase tracking-[0.12em]"
               >
                 Cara Belanja
               </Link>
@@ -180,7 +171,7 @@ export default function HomePage() {
         <Reveal className="mt-12 text-center">
           <Link
             href="/products"
-            className="glass inline-block rounded-full px-9 py-4 text-sm font-medium uppercase tracking-[0.12em] text-cream transition hover:border-gold/50 hover:text-champagne"
+            className="btn-glass inline-block px-9 py-4 text-sm font-medium uppercase tracking-[0.12em]"
           >
             Lihat Seluruh Koleksi
           </Link>
@@ -293,7 +284,7 @@ export default function HomePage() {
               <a
                 href={siteConfig.social.instagram}
                 {...externalLinkProps}
-                className="glass rounded-full px-8 py-4 text-sm font-medium uppercase tracking-[0.12em] text-cream transition hover:border-gold/50 hover:text-champagne"
+                className="btn-glass px-8 py-4 text-sm font-medium uppercase tracking-[0.12em]"
               >
                 Ikuti di Instagram
               </a>

@@ -4,8 +4,10 @@ import { useEffect, useRef } from "react";
 
 /**
  * Membungkus konten dengan animasi fade-up saat masuk viewport.
- * Murni progressive enhancement: tanpa JS/observer konten tetap terlihat,
- * dan prefers-reduced-motion dinonaktifkan via CSS.
+ * Progressive enhancement sungguhan: CSS `.reveal` hanya menyembunyikan
+ * konten di bawah selektor `html.js` (di-set oleh script inline di layout
+ * saat IntersectionObserver tersedia), jadi tanpa JS konten tetap terlihat.
+ * prefers-reduced-motion menonaktifkan animasi via CSS.
  */
 export function Reveal({
   children,

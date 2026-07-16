@@ -3,33 +3,58 @@
 import { useEffect, useState } from "react";
 import type { Product, ProductCategory } from "@/lib/products";
 import { categoryLabels } from "@/lib/products";
+import {
+  BEST_SELLER_HASH,
+  CATALOG_FILTER_EVENT,
+  type NavCatalogFilter,
+} from "@/lib/catalog-filter";
 import { ProductCard } from "@/components/ProductCard";
 
 type Filter = "all" | "best-seller" | ProductCategory;
 
+// Chip kategori diturunkan dari categoryLabels: kategori baru otomatis
+// muncul sebagai filter tanpa menyentuh komponen ini.
 const filters: { key: Filter; label: string }[] = [
   { key: "all", label: "Semua" },
   { key: "best-seller", label: "Best Seller" },
-  { key: "vest", label: categoryLabels.vest },
-  { key: "hat", label: categoryLabels.hat },
-  { key: "obi-belt", label: categoryLabels["obi-belt"] },
+  ...(
+    Object.entries(categoryLabels) as [ProductCategory, string][]
+  ).map(([key, label]) => ({ key, label })),
 ];
 
 /**
  * Grid katalog dengan filter kategori client-side (FR-3.1, FR-3.4).
- * Link navbar "Best Seller" mengarah ke /products#best-seller —
- * hash tersebut otomatis mengaktifkan filter best seller.
+ * Filter Best Seller diaktifkan lewat dua jalur yang saling melengkapi:
+ * - hash #best-seller saat halaman dibuka/riwayat browser berubah, dan
+ * - event kustom dari Header untuk navigasi same-page via <Link>
+ *   (pushState tidak memicu 'hashchange').
+ * Hash yang hilang me-reset filter ke "Semua".
  */
 export function ProductCatalog({ products }: { products: Product[] }) {
   const [active, setActive] = useState<Filter>("all");
 
   useEffect(() => {
     function applyHash() {
-      if (window.location.hash === "#best-seller") setActive("best-seller");
+      setActive(
+        window.location.hash === `#${BEST_SELLER_HASH}` ? "best-seller" : "all"
+      );
     }
-    applyHash();
+    function onFilterEvent(e: Event) {
+      const detail = (e as CustomEvent<NavCatalogFilter>).detail;
+      if (detail) setActive(detail);
+    }
+    if (window.location.hash === `#${BEST_SELLER_HASH}`) {
+      // Hash hanya bisa dibaca setelah mount (tidak tersedia saat SSG),
+      // jadi setState di sini memang diperlukan sekali di awal.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setActive("best-seller");
+    }
     window.addEventListener("hashchange", applyHash);
-    return () => window.removeEventListener("hashchange", applyHash);
+    window.addEventListener(CATALOG_FILTER_EVENT, onFilterEvent);
+    return () => {
+      window.removeEventListener("hashchange", applyHash);
+      window.removeEventListener(CATALOG_FILTER_EVENT, onFilterEvent);
+    };
   }, []);
 
   const visible = products.filter((p) => {
@@ -39,7 +64,7 @@ export function ProductCatalog({ products }: { products: Product[] }) {
   });
 
   return (
-    <div id="best-seller">
+    <div id={BEST_SELLER_HASH}>
       <div
         role="group"
         aria-label="Filter kategori produk"

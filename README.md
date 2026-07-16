@@ -46,7 +46,7 @@ src/
 
 ## Sebelum Launch (TODO)
 
-- [ ] Ganti `siteConfig.url` dan semua URL placeholder di `src/config/site.ts` dengan URL resmi (marketplace deep-link, sosial media, WhatsApp, email).
+- [ ] Set env `NEXT_PUBLIC_SITE_URL` ke domain produksi (build produksi akan menampilkan peringatan selama masih placeholder), lalu ganti semua URL placeholder di `src/config/site.ts` (marketplace deep-link, sosial media, WhatsApp, email).
 - [ ] Ganti gambar placeholder SVG (`public/hero.svg`, `public/products/**`) dengan foto produk asli (WebP/AVIF).
 - [ ] Pasang script analytics (Plausible/GA4) di `src/app/layout.tsx` — event tracking sudah disiapkan di `src/lib/analytics.ts` (`buy_now_click`, `marketplace_redirect`).
 - [ ] Deploy ke Vercel / Netlify / Cloudflare Pages (folder output: `out/`).

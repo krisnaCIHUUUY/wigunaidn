@@ -4,20 +4,32 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks } from "@/config/site";
+import type { NavLink } from "@/config/site";
+import { dispatchCatalogFilter } from "@/lib/catalog-filter";
 import { BuyNowButton } from "@/components/BuyNowButton";
 
 export function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function isActive(href: string) {
-    const path = href.split("#")[0] || "/";
+  // Gaya aktif dikendalikan flag data `highlight` di navLinks,
+  // bukan perbandingan string label.
+  function isActive(link: NavLink) {
+    if (link.highlight === false) return false;
+    const path = link.href.split("#")[0] || "/";
     if (path === "/") return pathname === "/";
     return pathname.startsWith(path);
   }
 
+  // <Link> App Router memakai pushState untuk hash same-page (tidak memicu
+  // 'hashchange'), jadi filter katalog dikirim eksplisit lewat event kustom.
+  function onNavClick(link: NavLink) {
+    if (link.catalogFilter) dispatchCatalogFilter(link.catalogFilter);
+    setMenuOpen(false);
+  }
+
   return (
-    <header className="glass sticky top-0 z-40 border-x-0 border-t-0 bg-ink/70">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-ink/95">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <Link
           href="/"
@@ -34,11 +46,10 @@ export function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  aria-current={isActive(link.href) ? "page" : undefined}
+                  onClick={() => onNavClick(link)}
+                  aria-current={isActive(link) ? "page" : undefined}
                   className={`text-[13px] font-medium uppercase tracking-[0.15em] transition hover:text-champagne ${
-                    isActive(link.href) && link.label !== "Best Seller"
-                      ? "text-gold"
-                      : "text-stone-300"
+                    isActive(link) ? "text-gold" : "text-stone-300"
                   }`}
                 >
                   {link.label}
@@ -98,12 +109,10 @@ export function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  aria-current={isActive(link.href) ? "page" : undefined}
+                  onClick={() => onNavClick(link)}
+                  aria-current={isActive(link) ? "page" : undefined}
                   className={`block py-3.5 text-sm font-medium uppercase tracking-[0.15em] ${
-                    isActive(link.href) && link.label !== "Best Seller"
-                      ? "text-gold"
-                      : "text-stone-200"
+                    isActive(link) ? "text-gold" : "text-stone-200"
                   }`}
                 >
                   {link.label}

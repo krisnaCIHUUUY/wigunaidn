@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { externalLinkProps } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Cara Belanja",
@@ -7,14 +8,9 @@ export const metadata: Metadata = {
     "Panduan langkah demi langkah belanja produk Wiguna melalui toko resmi kami di Shopee dan TikTok Shop.",
 };
 
-const externalLinkProps = {
-  target: "_blank",
-  rel: "noopener noreferrer",
-} as const;
-
 const guides = [
   {
-    channel: "Shopee",
+    channel: siteConfig.marketplace.shopee.label,
     storeUrl: siteConfig.marketplace.shopee.storeUrl,
     steps: [
       "Jelajahi produk di website ini dan buka halaman detail produk yang Anda inginkan.",
@@ -24,7 +20,7 @@ const guides = [
     ],
   },
   {
-    channel: "TikTok Shop",
+    channel: siteConfig.marketplace.tiktokShop.label,
     storeUrl: siteConfig.marketplace.tiktokShop.storeUrl,
     steps: [
       "Jelajahi produk di website ini dan buka halaman detail produk yang Anda inginkan.",

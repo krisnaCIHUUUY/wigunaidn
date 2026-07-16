@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { siteConfig } from "@/config/site";
+import { absoluteUrl, siteConfig } from "@/config/site";
 import {
   categoryLabels,
   getAllProducts,
@@ -25,13 +25,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return {};
+  // Crawler sosial (WhatsApp/Facebook/X) tidak merender og:image berformat
+  // SVG, jadi hanya format raster yang disertakan sebagai preview.
+  const ogImages = product.images.filter((img) => !img.src.endsWith(".svg"));
   return {
     title: product.name,
     description: product.description,
     openGraph: {
       title: product.name,
       description: product.description,
-      images: product.images.map((img) => ({ url: img.src, alt: img.alt })),
+      ...(ogImages.length > 0 && {
+        images: ogImages.map((img) => ({ url: img.src, alt: img.alt })),
+      }),
     },
   };
 }
@@ -47,14 +52,14 @@ export default async function ProductDetailPage({ params }: Props) {
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: product.images.map((img) => `${siteConfig.url}${img.src}`),
+    image: product.images.map((img) => absoluteUrl(img.src)),
     brand: { "@type": "Brand", name: siteConfig.name },
     offers: {
       "@type": "Offer",
       priceCurrency: "IDR",
       price: product.price,
       availability: "https://schema.org/InStock",
-      url: `${siteConfig.url}/products/${product.slug}/`,
+      url: absoluteUrl(`/products/${product.slug}/`),
     },
   };
 

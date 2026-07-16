@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { siteConfig } from "@/config/site";
+import { marketplaceChannels } from "@/config/site";
+import { externalLinkProps } from "@/lib/links";
 import { trackBuyNowClick } from "@/lib/analytics";
 
 /**
@@ -29,11 +30,6 @@ export function BuyNowButton() {
     };
   }, [open]);
 
-  const channels = [
-    { key: "shopee", ...siteConfig.marketplace.shopee },
-    { key: "tiktok_shop", ...siteConfig.marketplace.tiktokShop },
-  ];
-
   return (
     <div ref={containerRef} className="relative">
       <button
@@ -51,13 +47,12 @@ export function BuyNowButton() {
           role="menu"
           className="glass-strong absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-2xl shadow-2xl shadow-black/50"
         >
-          {channels.map((channel) => (
+          {marketplaceChannels.map((channel) => (
             <a
               key={channel.key}
               role="menuitem"
               href={channel.storeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...externalLinkProps}
               onClick={() => {
                 trackBuyNowClick(channel.key);
                 setOpen(false);

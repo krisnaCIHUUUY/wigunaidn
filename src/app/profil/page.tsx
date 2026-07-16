@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { externalLinkProps } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Profil Perusahaan",
@@ -87,9 +88,8 @@ export default function ProfilPage() {
           </a>
           <a
             href={siteConfig.contact.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass inline-flex min-h-11 items-center rounded-full px-7 text-sm font-medium uppercase tracking-[0.1em] text-cream transition hover:border-gold/50 hover:text-champagne"
+            {...externalLinkProps}
+            className="btn-glass inline-flex min-h-11 items-center px-7 text-sm font-medium uppercase tracking-[0.1em]"
           >
             WhatsApp
           </a>
