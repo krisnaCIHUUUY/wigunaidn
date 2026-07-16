@@ -161,10 +161,9 @@ export default function HomePage() {
           {/* Foto hero dalam bingkai glass */}
           <div className="glass-iridescent relative rounded-[2rem] p-3">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-coal">
-              {/* TODO: ganti dengan foto model resmi (WebP/AVIF) */}
               <Image
-                src="/hero.svg"
-                alt="Model mengenakan Rompi Transforma Wiguna dalam mode rompi dan mode tote bag"
+                src="/hero.webp"
+                alt="Dua model mengenakan koleksi Wiguna — vest denim berpanel batik dan bucket hat Seri Laras"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
