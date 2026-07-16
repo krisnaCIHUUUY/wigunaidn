@@ -8,48 +8,49 @@ import type { NavCatalogFilter } from "@/lib/catalog-filter";
  */
 
 // Domain produksi diambil dari env agar tidak ter-deploy dengan placeholder.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://wiguna.example.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://wiguna.example.com";
 if (process.env.NODE_ENV === "production" && siteUrl.includes("example.com")) {
   console.warn(
     "\n⚠ PERINGATAN: siteConfig.url masih placeholder (wiguna.example.com)." +
       "\n  Set NEXT_PUBLIC_SITE_URL sebelum deploy produksi — sitemap, robots," +
-      "\n  canonical/OG, dan JSON-LD semuanya memakai nilai ini.\n"
+      "\n  canonical/OG, dan JSON-LD semuanya memakai nilai ini.\n",
   );
 }
 
 export const siteConfig = {
   name: "Wiguna",
-  tagline: "Satu Item, Banyak Fungsi",
+  tagline: "One Product, Many Functions",
   description:
-    "Wiguna — brand fashion multifungsi asal Indonesia. Rompi yang berubah jadi tote bag, bucket hat convertible, dan obi belt. Belanja resmi di Shopee & TikTok Shop.",
+    "Wiguna brand fashion multifungsi asal Indonesia. Rompi yang berubah jadi tote bag, bucket hat convertible, dan obi belt. Belanja resmi di Shopee & TikTok Shop.",
   url: siteUrl,
   locale: "id_ID",
 
   marketplace: {
     shopee: {
       label: "Shopee",
-      storeUrl: "https://shopee.co.id/wiguna.official",
+      storeUrl: "https://shopee.co.id/wiguna.idn",
     },
     tiktokShop: {
       label: "TikTok Shop",
-      storeUrl: "https://www.tiktok.com/@wiguna.official/shop",
+      storeUrl: "https://www.tiktok.com/@wiguna.idn/shop",
     },
   },
 
   contact: {
-    email: "hello@wiguna.id",
-    whatsapp: "https://wa.me/6281234567890",
+    email: "wigunaidn@gmail.com",
+    whatsapp: "https://wa.me/6281225545389",
   },
 
   social: {
-    instagram: "https://www.instagram.com/wiguna.official",
-    tiktok: "https://www.tiktok.com/@wiguna.official",
+    instagram: "https://www.instagram.com/wiguna.idn",
+    tiktok: "https://www.tiktok.com/@wiguna.idn",
   },
 
   // Nama toko resmi untuk seksi verifikasi (FR-4.2, anti-counterfeit)
   officialStoreHandles: {
-    shopee: "wiguna.official",
-    tiktokShop: "@wiguna.official",
+    shopee: "wiguna.idn",
+    tiktokShop: "@wiguna.idn",
   },
 } as const;
 

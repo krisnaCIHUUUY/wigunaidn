@@ -28,15 +28,13 @@ export default function ProfilPage() {
           <p>
             Wiguna lahir dari sebuah pengamatan sederhana: lemari kita penuh,
             tapi rasanya selalu ada yang kurang. Kami percaya jawabannya bukan
-            menambah barang — melainkan membuat setiap barang bekerja lebih
-            keras.
+            menambah barang melainkan membuat setiap barang bekerja lebih keras.
           </p>
           <p>
             Dari situ lahirlah konsep fashion multifungsi Wiguna: rompi yang
-            dalam hitungan detik berubah menjadi tote bag, bucket hat yang
-            punya dua wajah, dan obi belt yang bisa membentuk tiga siluet
-            berbeda. Satu item, banyak fungsi — dirancang dan diproduksi di
-            Indonesia.
+            dalam hitungan detik berubah menjadi tote bag, bucket hat yang punya
+            dua wajah, dan obi belt yang bisa membentuk tiga siluet berbeda.
+            Satu item, banyak fungsi dirancang dan diproduksi di Indonesia.
           </p>
           {/* TODO: tambahkan foto brand/lifestyle resmi di seksi ini */}
         </div>
