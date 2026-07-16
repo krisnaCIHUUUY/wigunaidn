@@ -1,95 +1,74 @@
 [
   {
-    "slug": "rompi-transforma-hitam",
-    "name": "Rompi Transforma — Hitam",
+    "slug": "seri-jantra-vest",
+    "name": "Seri Jantra — Vest",
     "category": "vest",
     "price": 289000,
-    "materials": ["Kanvas katun 12oz", "Ritsleting YKK", "Tali webbing nilon"],
-    "description": "Rompi utilitas yang berubah menjadi tote bag dalam hitungan detik. Lepas ritsleting samping, lipat panelnya, dan rompi Anda siap membawa belanjaan. Potongan unisex dengan saku multifungsi di dada dan pinggang.",
+    "materials": ["Denim katun", "Tenun ikat motif jantra", "Ritsleting depan & keliling"],
+    "description": "Vest denim navy dengan panel tenun ikat motif jantra (pilin) hitam-putih beraksen sage dan kuning. Saku dada berpanel ikat senada, ritsleting depan penuh, dan jalur ritsleting keliling tepi untuk transformasi. Potongan unisex yang gagah namun tetap membumi.",
     "transformation": "Rompi ↔ Tote Bag",
     "images": [
-      { "src": "/products/rompi-transforma-hitam/1.svg", "alt": "Rompi Transforma hitam tampak depan, dikenakan model" },
-      { "src": "/products/rompi-transforma-hitam/2.svg", "alt": "Rompi Transforma hitam dalam mode tote bag" }
+      {
+        "src": "/products/seri-jantra-vest/seri_jantra_vest.webp",
+        "alt": "Vest denim navy Seri Jantra dengan panel tenun ikat motif pilin hitam-putih dan saku dada, tampak depan"
+      }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/rompi-transforma-hitam",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/rompi-transforma-hitam",
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-jantra-vest",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-jantra-vest",
     "isBestSeller": true
   },
   {
-    "slug": "rompi-transforma-khaki",
-    "name": "Rompi Transforma — Khaki",
+    "slug": "seri-laras-vest",
+    "name": "Seri Laras — Vest",
     "category": "vest",
     "price": 289000,
-    "materials": ["Kanvas katun 12oz", "Ritsleting YKK", "Tali webbing nilon"],
-    "description": "Varian khaki dari rompi ikonik Wiguna. Fungsi sama — rompi harian yang bertransformasi menjadi tote bag — dengan warna netral hangat yang mudah dipadukan.",
+    "materials": ["Denim katun", "Batik motif candi & flora maroon", "Ritsleting depan & keliling"],
+    "description": "Vest denim navy berpanel batik maroon bermotif candi dan juntaian flora di kedua sisi. Garis panel vertikal memberi siluet memanjang yang rapi, dengan ritsleting depan penuh dan jalur ritsleting keliling untuk berubah fungsi.",
     "transformation": "Rompi ↔ Tote Bag",
     "images": [
-      { "src": "/products/rompi-transforma-khaki/1.svg", "alt": "Rompi Transforma khaki tampak depan, dikenakan model" },
-      { "src": "/products/rompi-transforma-khaki/2.svg", "alt": "Rompi Transforma khaki dalam mode tote bag" }
+      {
+        "src": "/products/seri-laras-vest/seri_laras_vest.webp",
+        "alt": "Vest denim navy Seri Laras dengan panel batik maroon bermotif candi dan flora, tampak depan"
+      }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/rompi-transforma-khaki",
-    "isBestSeller": false
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-laras-vest",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-laras-vest",
+    "isBestSeller": true
   },
   {
-    "slug": "bucket-hat-balik-dua-sisi",
-    "name": "Bucket Hat Balik — Dua Sisi",
+    "slug": "seri-laras-topi",
+    "name": "Seri Laras — Topi",
     "category": "hat",
     "price": 149000,
-    "materials": ["Twill katun", "Lapisan quick-dry polyester"],
-    "description": "Satu bucket hat, dua gaya. Sisi luar twill polos untuk tampilan clean, sisi dalam bermotif untuk statement look. Tinggal balik sesuai mood.",
-    "transformation": "Polos ↔ Motif (reversible)",
+    "materials": ["Denim katun", "Batik motif candi & flora maroon", "Tali panjang denim"],
+    "description": "Bucket hat denim navy dengan band batik maroon senada Seri Laras — motif candi dan flora yang khas. Tali panjang dari denim bisa diikat di dagu, dililit sebagai aksen, atau dibiarkan menjuntai untuk gaya yang berbeda.",
+    "transformation": "Tali multi-gaya",
     "images": [
-      { "src": "/products/bucket-hat-balik-dua-sisi/1.svg", "alt": "Bucket Hat Balik sisi polos dikenakan model" },
-      { "src": "/products/bucket-hat-balik-dua-sisi/2.svg", "alt": "Bucket Hat Balik sisi motif" }
+      {
+        "src": "/products/seri-laras-topi/seri_laras_topi.webp",
+        "alt": "Bucket hat denim navy Seri Laras dengan band batik maroon bermotif flora dan tali panjang"
+      }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/bucket-hat-balik",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/bucket-hat-balik",
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-laras-topi",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-laras-topi",
     "isBestSeller": true
   },
   {
-    "slug": "bucket-hat-lipat-saku",
-    "name": "Bucket Hat Lipat Saku",
-    "category": "hat",
-    "price": 129000,
-    "materials": ["Nilon ripstop", "Tali serut adjustable"],
-    "description": "Bucket hat ultra-ringan yang bisa dilipat menjadi pouch kecil seukuran saku. Teman perjalanan yang selalu siap saat matahari terik.",
-    "transformation": "Topi ↔ Pouch saku",
+    "slug": "seri-savitri-vest",
+    "name": "Seri Savitri — Vest",
+    "category": "vest",
+    "price": 299000,
+    "materials": ["Denim katun", "Batik remukan putih-cokelat", "Aplikasi motif daun", "Ritsleting depan & keliling"],
+    "description": "Vest denim navy dengan panel batik remukan putih bertekstur retakan cokelat dan aplikasi motif daun hitam bertitik. Kontras gelap-terang yang artistik menjadikannya statement piece, lengkap dengan ritsleting depan dan jalur ritsleting keliling untuk transformasi.",
+    "transformation": "Rompi ↔ Tote Bag",
     "images": [
-      { "src": "/products/bucket-hat-lipat-saku/1.svg", "alt": "Bucket Hat Lipat Saku dikenakan model" },
-      { "src": "/products/bucket-hat-lipat-saku/2.svg", "alt": "Bucket Hat Lipat Saku terlipat dalam mode pouch" }
+      {
+        "src": "/products/seri-savitri-vest/seri_savitri_vest.webp",
+        "alt": "Vest denim navy Seri Savitri dengan panel batik remukan putih-cokelat dan aplikasi motif daun hitam, tampak depan"
+      }
     ],
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/bucket-hat-lipat-saku",
-    "isBestSeller": false
-  },
-  {
-    "slug": "obi-belt-tenun-natural",
-    "name": "Obi Belt Tenun — Natural",
-    "category": "obi-belt",
-    "price": 199000,
-    "materials": ["Tenun katun handmade", "Kulit sintetis premium"],
-    "description": "Obi belt dengan panel tenun tradisional yang bisa dikenakan tiga cara: sebagai belt statement di luar blazer, ikat pinggang dress, atau aksen kimono-style. Satu aksesori, banyak siluet.",
-    "transformation": "3 gaya pemakaian",
-    "images": [
-      { "src": "/products/obi-belt-tenun-natural/1.svg", "alt": "Obi Belt Tenun natural dikenakan di atas dress" },
-      { "src": "/products/obi-belt-tenun-natural/2.svg", "alt": "Detail panel tenun Obi Belt natural" }
-    ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/obi-belt-tenun-natural",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/obi-belt-tenun-natural",
-    "isBestSeller": true
-  },
-  {
-    "slug": "obi-belt-kanvas-hitam",
-    "name": "Obi Belt Kanvas — Hitam",
-    "category": "obi-belt",
-    "price": 179000,
-    "materials": ["Kanvas katun", "Buckle logam anti-karat"],
-    "description": "Versi minimalis dari obi belt Wiguna. Kanvas hitam pekat dengan buckle tersembunyi — cocok untuk gaya monokrom maupun sebagai kontras di outfit cerah.",
-    "transformation": "3 gaya pemakaian",
-    "images": [
-      { "src": "/products/obi-belt-kanvas-hitam/1.svg", "alt": "Obi Belt Kanvas hitam dikenakan model" },
-      { "src": "/products/obi-belt-kanvas-hitam/2.svg", "alt": "Obi Belt Kanvas hitam tampak detail" }
-    ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/obi-belt-kanvas-hitam",
+    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-savitri-vest",
+    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-savitri-vest",
     "isBestSeller": true
   }
 ]

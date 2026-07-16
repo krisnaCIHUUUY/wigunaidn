@@ -9,7 +9,17 @@ import { Reveal } from "@/components/Reveal";
 /* Ikon SVG stroke-konsisten (tanpa emoji) */
 function IconLayers() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
       <path d="M12 2 2 7l10 5 10-5-10-5Z" />
       <path d="m2 17 10 5 10-5" />
       <path d="m2 12 10 5 10-5" />
@@ -18,7 +28,17 @@ function IconLayers() {
 }
 function IconGem() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
       <path d="M6 3h12l4 6-10 13L2 9l4-6Z" />
       <path d="M11 3 8 9l4 13 4-13-3-6" />
       <path d="M2 9h20" />
@@ -27,7 +47,17 @@ function IconGem() {
 }
 function IconShield() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
       <path d="m9 12 2 2 4-4" />
     </svg>
@@ -38,7 +68,7 @@ const brandValues = [
   {
     icon: <IconLayers />,
     title: "Satu Item, Banyak Fungsi",
-    body: "Setiap koleksi dirancang dengan minimal dua cara pakai — rompi menjadi tote bag, topi menjadi pouch, satu belt membentuk tiga siluet.",
+    body: "Setiap koleksi dirancang dengan minimal dua cara pakai rompi menjadi tote bag, topi menjadi pouch, satu belt membentuk tiga siluet.",
   },
   {
     icon: <IconGem />,
@@ -56,7 +86,7 @@ const storySteps = [
   {
     number: "01",
     title: "Berawal dari Kejenuhan",
-    body: "Lemari yang penuh namun terasa selalu kurang. Wiguna lahir dari keyakinan bahwa jawabannya bukan menambah barang — melainkan membuat setiap barang bekerja lebih keras.",
+    body: "Lemari yang penuh namun terasa selalu kurang. Wiguna lahir dari keyakinan bahwa jawabannya bukan menambah barang melainkan membuat setiap barang bekerja lebih keras.",
   },
   {
     number: "02",
@@ -66,7 +96,7 @@ const storySteps = [
   {
     number: "03",
     title: "Menemani Setiap Perjalanan",
-    body: "Dari komuter pagi hingga perjalanan akhir pekan — satu item Wiguna menggantikan dua, meringankan langkah tanpa mengorbankan gaya.",
+    body: "Dari komuter pagi hingga perjalanan akhir pekan satu item Wiguna menggantikan dua, meringankan langkah tanpa mengorbankan gaya.",
   },
 ];
 
@@ -80,17 +110,24 @@ export default function HomePage() {
         {/* Dekorasi liquid blobs */}
         <div
           className="liquid-blob left-[-10%] top-[-15%] h-[28rem] w-[28rem]"
-          style={{ background: "radial-gradient(circle, rgba(198,161,91,0.55), transparent 65%)" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(198,161,91,0.55), transparent 65%)",
+          }}
         />
         <div
           className="liquid-blob bottom-[-20%] right-[-8%] h-[26rem] w-[26rem]"
-          style={{ background: "radial-gradient(circle, rgba(232,213,164,0.35), transparent 60%)", animationDelay: "-9s" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(232,213,164,0.35), transparent 60%)",
+            animationDelay: "-9s",
+          }}
         />
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-20 pt-16 md:grid-cols-2 md:pb-28 md:pt-24">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-gold">
-              Multifunctional Fashion — Indonesia
+              Multifunctional Fashion Indonesia
             </p>
             <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-cream md:text-6xl lg:text-7xl">
               Satu Item,
@@ -100,7 +137,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-md text-base font-light leading-relaxed text-stone-300">
               Rompi yang berubah menjadi tote bag. Bucket hat dengan dua wajah.
               Obi belt yang membentuk tiga siluet. Dirancang untuk mereka yang
-              bergerak — tanpa mengorbankan keanggunan.
+              bergerak tanpa mengorbankan keanggunan.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -117,7 +154,7 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-8 text-xs uppercase tracking-[0.2em] text-stone-500">
-              Tersedia eksklusif di toko resmi — Shopee &amp; TikTok Shop
+              Tersedia eksklusif di toko resmi Shopee &amp; TikTok Shop
             </p>
           </div>
 
@@ -156,8 +193,8 @@ export default function HomePage() {
             Karya Paling Dicari
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-center text-sm font-light leading-relaxed text-stone-400">
-            Kurasi terbaik dari koleksi Wiguna — setiap karya membawa lebih
-            dari satu kemungkinan.
+            Kurasi terbaik dari koleksi Wiguna setiap karya membawa lebih dari
+            satu kemungkinan.
           </p>
         </Reveal>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -182,7 +219,11 @@ export default function HomePage() {
       <section className="relative overflow-hidden border-y border-white/10 bg-coal/40">
         <div
           className="liquid-blob right-[-12%] top-[10%] h-[22rem] w-[22rem]"
-          style={{ background: "radial-gradient(circle, rgba(198,161,91,0.35), transparent 60%)", animationDelay: "-5s" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(198,161,91,0.35), transparent 60%)",
+            animationDelay: "-5s",
+          }}
         />
         <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <Reveal>
@@ -256,7 +297,11 @@ export default function HomePage() {
       <section className="relative overflow-hidden px-4 pb-24">
         <div
           className="liquid-blob left-[20%] top-[0%] h-[24rem] w-[36rem]"
-          style={{ background: "radial-gradient(circle, rgba(232,213,164,0.28), transparent 60%)", animationDelay: "-13s" }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(232,213,164,0.28), transparent 60%)",
+            animationDelay: "-13s",
+          }}
         />
         <Reveal className="relative mx-auto max-w-4xl">
           <div className="glass-iridescent rounded-[2.5rem] px-6 py-14 text-center md:px-16 md:py-16">
@@ -269,7 +314,7 @@ export default function HomePage() {
               <span className="text-champagne italic">Mereka yang Pertama</span>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-sm font-light leading-relaxed text-stone-300">
-              Bergabunglah dengan Wiguna Circle — kanal terbatas tempat kami
+              Bergabunglah dengan Wiguna Circle kanal terbatas tempat kami
               membagikan akses awal setiap rilisan, cerita di balik desain, dan
               penawaran yang tidak pernah kami umumkan di tempat lain.
             </p>
@@ -290,7 +335,7 @@ export default function HomePage() {
               </a>
             </div>
             <p className="mt-6 text-xs uppercase tracking-[0.2em] text-stone-500">
-              Tanpa biaya — undangan terbatas setiap musim
+              Tanpa biaya undangan terbatas setiap musim
             </p>
           </div>
         </Reveal>

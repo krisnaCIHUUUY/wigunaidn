@@ -14,7 +14,7 @@ const guides = [
     storeUrl: siteConfig.marketplace.shopee.storeUrl,
     steps: [
       "Jelajahi produk di website ini dan buka halaman detail produk yang Anda inginkan.",
-      'Ketuk tombol "Beli di Shopee" — Anda akan diarahkan ke listing produk tersebut di toko resmi kami.',
+      'Ketuk tombol "Beli di Shopee". Anda akan diarahkan ke listing produk tersebut di toko resmi kami.',
       "Pastikan nama toko adalah toko resmi Wiguna (lihat verifikasi di bawah).",
       "Selesaikan checkout dan pembayaran langsung di aplikasi/website Shopee.",
     ],
@@ -24,7 +24,7 @@ const guides = [
     storeUrl: siteConfig.marketplace.tiktokShop.storeUrl,
     steps: [
       "Jelajahi produk di website ini dan buka halaman detail produk yang Anda inginkan.",
-      'Ketuk tombol "Beli di TikTok Shop" — Anda akan diarahkan ke listing produk tersebut.',
+      'Ketuk tombol "Beli di TikTok Shop". Anda akan diarahkan ke listing produk tersebut.',
       "Pastikan akun penjual adalah akun resmi Wiguna (lihat verifikasi di bawah).",
       "Selesaikan checkout dan pembayaran langsung di aplikasi TikTok.",
     ],
@@ -42,7 +42,7 @@ export default function CaraBelanjaPage() {
       </h1>
       <p className="mt-4 max-w-2xl text-sm font-light leading-relaxed text-stone-400">
         Website ini adalah katalog resmi Wiguna. Seluruh transaksi dilakukan
-        dengan aman di marketplace — ikuti langkah berikut.
+        dengan aman di marketplace ikuti langkah berikut.
       </p>
 
       <div className="mt-12 grid gap-6 md:grid-cols-2">

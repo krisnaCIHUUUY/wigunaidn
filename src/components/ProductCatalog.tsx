@@ -12,15 +12,18 @@ import { ProductCard } from "@/components/ProductCard";
 
 type Filter = "all" | "best-seller" | ProductCategory;
 
-// Chip kategori diturunkan dari categoryLabels: kategori baru otomatis
-// muncul sebagai filter tanpa menyentuh komponen ini.
-const filters: { key: Filter; label: string }[] = [
-  { key: "all", label: "Semua" },
-  { key: "best-seller", label: "Best Seller" },
-  ...(
-    Object.entries(categoryLabels) as [ProductCategory, string][]
-  ).map(([key, label]) => ({ key, label })),
-];
+// Chip kategori diturunkan dari categoryLabels, dibatasi ke kategori yang
+// benar-benar punya produk — kategori kosong tidak memunculkan chip.
+function buildFilters(products: Product[]): { key: Filter; label: string }[] {
+  const present = new Set(products.map((p) => p.category));
+  return [
+    { key: "all" as const, label: "Semua" },
+    { key: "best-seller" as const, label: "Best Seller" },
+    ...(Object.entries(categoryLabels) as [ProductCategory, string][])
+      .filter(([key]) => present.has(key))
+      .map(([key, label]) => ({ key, label })),
+  ];
+}
 
 /**
  * Grid katalog dengan filter kategori client-side (FR-3.1, FR-3.4).
@@ -32,6 +35,7 @@ const filters: { key: Filter; label: string }[] = [
  */
 export function ProductCatalog({ products }: { products: Product[] }) {
   const [active, setActive] = useState<Filter>("all");
+  const filters = buildFilters(products);
 
   useEffect(() => {
     function applyHash() {

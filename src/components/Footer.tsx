@@ -19,7 +19,7 @@ export function Footer() {
           </p>
           <p className="mt-4 text-sm leading-relaxed text-stone-400">
             {siteConfig.tagline}. Fashion multifungsi yang dirancang untuk gaya
-            hidup urban — satu item, banyak cara pakai.
+            hidup urban satu item, banyak cara pakai.
           </p>
           <Link
             href="/profil"
