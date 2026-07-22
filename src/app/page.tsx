@@ -106,76 +106,90 @@ export default function HomePage() {
   return (
     <>
       {/* ============ Hero — Liquid Glass (FR-2.1) ============ */}
-      <section className="relative overflow-hidden">
+      <section className="relative flex min-h-[92vh] items-center overflow-hidden">
+        {/* Foto hero full-bleed sebagai latar */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/hero.webp"
+            alt="Dua model mengenakan koleksi Wiguna vest denim berpanel batik dan bucket hat Seri Laras"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_20%]"
+          />
+          {/* Scrim gelap + vignette agar teks tengah terbaca (adaptasi tema gelap) */}
+          <div className="absolute inset-0 bg-ink/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/70" />
+        </div>
+
         {/* Dekorasi liquid blobs */}
         <div
           className="liquid-blob left-[-10%] top-[-15%] h-[28rem] w-[28rem]"
           style={{
             background:
-              "radial-gradient(circle, rgba(198,161,91,0.55), transparent 65%)",
+              "radial-gradient(circle, rgba(198,161,91,0.45), transparent 65%)",
           }}
         />
         <div
           className="liquid-blob bottom-[-20%] right-[-8%] h-[26rem] w-[26rem]"
           style={{
             background:
-              "radial-gradient(circle, rgba(232,213,164,0.35), transparent 60%)",
+              "radial-gradient(circle, rgba(232,213,164,0.3), transparent 60%)",
             animationDelay: "-9s",
           }}
         />
 
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-20 pt-16 md:grid-cols-2 md:pb-28 md:pt-24">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-gold">
-              Multifunctional Fashion Indonesia
-            </p>
-            <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-cream md:text-6xl lg:text-7xl">
-              Satu Item,
-              <br />
-              <span className="text-champagne italic">Banyak Fungsi.</span>
-            </h1>
-            <p className="mt-6 max-w-md text-base font-light leading-relaxed text-stone-300">
-              Rompi yang berubah menjadi tote bag. Bucket hat dengan dua wajah.
-              Obi belt yang membentuk tiga siluet. Dirancang untuk mereka yang
-              bergerak tanpa mengorbankan keanggunan.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="/products"
-                className="btn-gold rounded-full px-9 py-4 text-sm font-semibold uppercase tracking-[0.12em]"
-              >
-                Jelajahi Koleksi
-              </Link>
-              <Link
-                href="/cara-belanja"
-                className="btn-glass px-8 py-4 text-sm font-medium uppercase tracking-[0.12em]"
-              >
-                Cara Belanja
-              </Link>
-            </div>
-            <p className="mt-8 text-xs uppercase tracking-[0.2em] text-stone-500">
-              Tersedia eksklusif di toko resmi Shopee &amp; TikTok Shop
-            </p>
+        {/* Konten tengah */}
+        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center px-4 py-24 text-center md:py-28">
+          {/* Eyebrow */}
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-gold">
+            Multifunctional Fashion Indonesia
+          </p>
+
+          <h1 className="mt-8 font-display text-6xl font-medium leading-[1.02] text-cream md:text-7xl lg:text-[5.75rem]">
+            Satu Item,
+            <br />
+            <span className="text-champagne italic">Banyak</span> Fungsi.
+          </h1>
+
+          <p className="mt-7 max-w-xl text-base font-light leading-relaxed text-stone-300 md:text-lg">
+            Rompi yang berubah menjadi tote bag. Bucket hat dengan dua wajah.
+            Obi belt yang membentuk tiga siluet. Dirancang untuk mereka yang
+            bergerak tanpa mengorbankan keanggunan.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/products"
+              className="btn-gold rounded-full px-9 py-4 text-sm font-semibold uppercase tracking-[0.12em]"
+            >
+              Jelajahi Koleksi
+            </Link>
+            <Link
+              href="/cara-belanja"
+              className="btn-glass px-8 py-4 text-sm font-medium uppercase tracking-[0.12em]"
+            >
+              Cara Belanja
+            </Link>
           </div>
 
-          {/* Foto hero dalam bingkai glass */}
-          <div className="glass-iridescent relative rounded-[2rem] p-3">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-coal">
-              <Image
-                src="/hero.webp"
-                alt="Dua model mengenakan koleksi Wiguna — vest denim berpanel batik dan bucket hat Seri Laras"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="glass-strong absolute -bottom-5 left-1/2 w-max -translate-x-1/2 rounded-full px-6 py-2.5">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-champagne">
-                Rompi ↔ Tote Bag
-              </p>
-            </div>
-          </div>
+          {/* Baris statistik */}
+          <dl className="mt-16 flex flex-wrap items-start justify-center gap-x-12 gap-y-8">
+            {[
+              { value: "5", label: "Karya Terkurasi" },
+              { value: "2×", label: "Fungsi per Item" },
+              { value: "100%", label: "Buatan Indonesia" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <dt className="font-display text-4xl font-medium text-champagne md:text-5xl">
+                  {stat.value}
+                </dt>
+                <dd className="mt-2 text-xs uppercase tracking-[0.2em] text-stone-400">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
