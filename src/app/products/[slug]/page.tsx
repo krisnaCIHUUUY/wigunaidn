@@ -113,7 +113,7 @@ export default async function ProductDetailPage({ params }: Props) {
             {formatIDR(product.price)}
           </p>
           <p className="mt-1 text-xs tracking-wide text-stone-500">
-            Harga referensi — harga final &amp; promo mengikuti marketplace.
+            Harga referensi final &amp; promo mengikuti marketplace.
           </p>
 
           <div className="mt-9">

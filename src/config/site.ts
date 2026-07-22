@@ -13,7 +13,7 @@ const siteUrl =
 if (process.env.NODE_ENV === "production" && siteUrl.includes("example.com")) {
   console.warn(
     "\n⚠ PERINGATAN: siteConfig.url masih placeholder (wiguna.example.com)." +
-      "\n  Set NEXT_PUBLIC_SITE_URL sebelum deploy produksi — sitemap, robots," +
+      "\n  Set NEXT_PUBLIC_SITE_URL sebelum deploy produksi sitemap, robots," +
       "\n  canonical/OG, dan JSON-LD semuanya memakai nilai ini.\n",
   );
 }
@@ -29,8 +29,10 @@ export const siteConfig = {
   marketplace: {
     shopee: {
       label: "Shopee",
-      storeUrl: "https://shopee.co.id/wiguna.idn",
+      storeUrl: "https://s.shopee.co.id/wigunaidn.store",
     },
+
+    // tiktok shop belum ada
     tiktokShop: {
       label: "TikTok Shop",
       storeUrl: "https://www.tiktok.com/@wiguna.idn/shop",

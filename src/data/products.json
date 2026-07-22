@@ -1,10 +1,14 @@
 [
   {
     "slug": "seri-jantra-vest",
-    "name": "Seri Jantra — Vest",
+    "name": "Seri Jantra Vest",
     "category": "vest",
     "price": 289000,
-    "materials": ["Denim katun", "Tenun ikat motif jantra", "Ritsleting depan & keliling"],
+    "materials": [
+      "Denim katun",
+      "Tenun ikat motif jantra",
+      "Ritsleting depan & keliling"
+    ],
     "description": "Vest denim navy dengan panel tenun ikat motif jantra (pilin) hitam-putih beraksen sage dan kuning. Saku dada berpanel ikat senada, ritsleting depan penuh, dan jalur ritsleting keliling tepi untuk transformasi. Potongan unisex yang gagah namun tetap membumi.",
     "transformation": "Rompi ↔ Tote Bag",
     "images": [
@@ -13,16 +17,20 @@
         "alt": "Vest denim navy Seri Jantra dengan panel tenun ikat motif pilin hitam-putih dan saku dada, tampak depan"
       }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-jantra-vest",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-jantra-vest",
+    "shopeeUrl": "https://id.shp.ee/WvDL1VRZ",
+    "tiktokShopUrl": "#",
     "isBestSeller": true
   },
   {
     "slug": "seri-laras-vest",
-    "name": "Seri Laras — Vest",
+    "name": "Seri Laras Vest",
     "category": "vest",
     "price": 289000,
-    "materials": ["Denim katun", "Batik motif candi & flora maroon", "Ritsleting depan & keliling"],
+    "materials": [
+      "Denim katun",
+      "Batik motif candi & flora maroon",
+      "Ritsleting depan & keliling"
+    ],
     "description": "Vest denim navy berpanel batik maroon bermotif candi dan juntaian flora di kedua sisi. Garis panel vertikal memberi siluet memanjang yang rapi, dengan ritsleting depan penuh dan jalur ritsleting keliling untuk berubah fungsi.",
     "transformation": "Rompi ↔ Tote Bag",
     "images": [
@@ -31,16 +39,20 @@
         "alt": "Vest denim navy Seri Laras dengan panel batik maroon bermotif candi dan flora, tampak depan"
       }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-laras-vest",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-laras-vest",
+    "shopeeUrl": "https://id.shp.ee/mbXZqLTP",
+    "tiktokShopUrl": "#",
     "isBestSeller": true
   },
   {
     "slug": "seri-laras-topi",
-    "name": "Seri Laras — Topi",
+    "name": "Seri Laras Topi",
     "category": "hat",
     "price": 149000,
-    "materials": ["Denim katun", "Batik motif candi & flora maroon", "Tali panjang denim"],
+    "materials": [
+      "Denim katun",
+      "Batik motif candi & flora maroon",
+      "Tali panjang denim"
+    ],
     "description": "Bucket hat denim navy dengan band batik maroon senada Seri Laras — motif candi dan flora yang khas. Tali panjang dari denim bisa diikat di dagu, dililit sebagai aksen, atau dibiarkan menjuntai untuk gaya yang berbeda.",
     "transformation": "Tali multi-gaya",
     "images": [
@@ -49,16 +61,21 @@
         "alt": "Bucket hat denim navy Seri Laras dengan band batik maroon bermotif flora dan tali panjang"
       }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-laras-topi",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-laras-topi",
+    "shopeeUrl": "https://id.shp.ee/7oryatQk",
+    "tiktokShopUrl": "#",
     "isBestSeller": true
   },
   {
     "slug": "seri-savitri-vest",
-    "name": "Seri Savitri — Vest",
+    "name": "Seri Savitri Vest",
     "category": "vest",
     "price": 299000,
-    "materials": ["Denim katun", "Batik remukan putih-cokelat", "Aplikasi motif daun", "Ritsleting depan & keliling"],
+    "materials": [
+      "Denim katun",
+      "Batik remukan putih-cokelat",
+      "Aplikasi motif daun",
+      "Ritsleting depan & keliling"
+    ],
     "description": "Vest denim navy dengan panel batik remukan putih bertekstur retakan cokelat dan aplikasi motif daun hitam bertitik. Kontras gelap-terang yang artistik menjadikannya statement piece, lengkap dengan ritsleting depan dan jalur ritsleting keliling untuk transformasi.",
     "transformation": "Rompi ↔ Tote Bag",
     "images": [
@@ -67,8 +84,31 @@
         "alt": "Vest denim navy Seri Savitri dengan panel batik remukan putih-cokelat dan aplikasi motif daun hitam, tampak depan"
       }
     ],
-    "shopeeUrl": "https://shopee.co.id/wiguna.official/seri-savitri-vest",
-    "tiktokShopUrl": "https://www.tiktok.com/@wiguna.official/shop/seri-savitri-vest",
+    "shopeeUrl": "https://id.shp.ee/jttvtXca",
+    "tiktokShopUrl": "#",
+    "isBestSeller": true
+  },
+  {
+    "slug": "seri-savitri-topi",
+    "name": "Seri Savitri Topi",
+    "category": "hat",
+    "price": 149000,
+    "materials": [
+      "Denim katun",
+      "Batik remukan putih-cokelat",
+      "Aplikasi motif daun",
+      "Tali panjang denim"
+    ],
+    "description": "Bucket hat denim navy dengan band batik remukan putih bertekstur retakan cokelat dan aplikasi motif daun hitam senada Seri Savitri. Tali panjang dari denim bisa diikat di dagu, dililit sebagai aksen, atau dibiarkan menjuntai untuk gaya yang berbeda.",
+    "transformation": "Tali multi-gaya",
+    "images": [
+      {
+        "src": "/products/seri-savitri-topi/seri_savitri_topi.webp",
+        "alt": "Bucket hat denim navy Seri Savitri dengan band batik remukan putih-cokelat dan aplikasi motif daun hitam serta tali panjang denim"
+      }
+    ],
+    "shopeeUrl": "https://id.shp.ee/qQtv3Qfe",
+    "tiktokShopUrl": "#",
     "isBestSeller": true
   }
 ]
