@@ -29,8 +29,12 @@ export const siteConfig = {
   marketplace: {
     shopee: {
       label: "Shopee",
-      storeUrl: "https://s.shopee.co.id/wigunaidn.store",
+      // storeUrl: "https://s.shopee.co.id/wigunaidn.store",
+      storeUrl:
+        "https://shopee.co.id/wigunaidn.store?entryPoint=ShopBySearch&searchKeyword=wiguna.idn",
     },
+
+    // https://shopee.co.id/wigunaidn.
 
     // tiktok shop belum ada
     tiktokShop: {
